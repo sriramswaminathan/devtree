@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:/data/dev.db
+      - JWT_SECRET=change-this-to-a-random-secret-min-32-chars-long
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    volumes:
+      - devtree-data:/data
+    restart: unless-stopped
+
+volumes:
+  devtree-data:

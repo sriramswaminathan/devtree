@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: devtree
+    runtime: docker
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: file:/data/dev.db
+      - key: JWT_SECRET
+        generateValue: true
+      - key: NEXT_PUBLIC_APP_URL
+        value: https://devtree.onrender.com
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
