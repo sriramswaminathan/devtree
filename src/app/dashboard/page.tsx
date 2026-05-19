@@ -11,6 +11,7 @@ import {
   BarChart3,
   Eye,
   Loader2,
+  Megaphone,
 } from 'lucide-react';
 
 interface LinkItem {
@@ -258,6 +259,22 @@ export default function DashboardPage() {
 
       {/* Preview & Stats */}
       <div className="space-y-6">
+        <div className="bg-indigo-50 rounded-xl border border-indigo-100 p-6">
+          <h2 className="font-semibold text-indigo-900 mb-2 flex items-center gap-2">
+            <Megaphone className="w-4 h-4" />
+            Get Users
+          </h2>
+          <p className="text-sm text-indigo-700 mb-3">
+            Copy-paste ready tweets, DMs, emails, and launch posts.
+          </p>
+          <a
+            href="/dashboard/marketing"
+            className="inline-block bg-indigo-600 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-indigo-700"
+          >
+            Open Marketing Generator →
+          </a>
+        </div>
+
         <div className="bg-white rounded-xl border border-slate-100 p-6">
           <h2 className="font-semibold text-slate-900 mb-4 flex items-center gap-2">
             <BarChart3 className="w-4 h-4" />
